@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "913060791529",
+    "firebase_url": "https://livebettinggoal-bfe19.firebaseio.com",
+    "project_id": "livebettinggoal-bfe19",
+    "storage_bucket": "livebettinggoal-bfe19.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:913060791529:android:0ad8609592ebd1c8",
+        "android_client_info": {
+          "package_name": "com.codegreed_devs.livebettinggoal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "913060791529-uvol0ui86la4h015pns0ioj1egs75dpi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.codegreed_devs.livebettinggoal",
+            "certificate_hash": "4b3413882266bdb204e1a5ba2ab803a4a6909c91"
+          }
+        },
+        {
+          "client_id": "913060791529-ej5vllscfk06s99a54dr96k4qgcjd1m7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQwemUfzWnfhQCSbNJA30uB8wtp9EpoRM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "913060791529-ej5vllscfk06s99a54dr96k4qgcjd1m7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
