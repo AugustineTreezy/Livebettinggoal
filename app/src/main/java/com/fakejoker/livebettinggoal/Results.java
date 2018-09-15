@@ -79,7 +79,7 @@ public class Results extends AppCompatActivity {
             result_matchesAdapter=new Result_MatchesAdapter(this,0,arrayoflivematches);
 
             AsyncHttpClient asyncHttpClient=new AsyncHttpClient();
-            asyncHttpClient.post("http://www.livebettinggoal.com/results.php", new TextHttpResponseHandler() {
+            asyncHttpClient.post("https://www.livebettinggoal.com/results.php", new TextHttpResponseHandler() {
                 @Override
                 public void onFailure(int i, Header[] headers, String s, Throwable throwable) {
                     mprogress.dismiss();

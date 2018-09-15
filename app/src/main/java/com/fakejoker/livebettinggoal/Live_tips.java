@@ -13,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -33,6 +34,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import cz.msebera.android.httpclient.Header;
+import es.dmoral.toasty.Toasty;
 
 public class Live_tips extends AppCompatActivity {
     private AdView mAdView;
@@ -41,7 +43,7 @@ public class Live_tips extends AppCompatActivity {
     ProgressDialog mprogress;
     boolean connected = false;
 
-    String appserver_url="http://www.livebettinggoal.com/appuser.php";
+    String appserver_url="https://www.livebettinggoal.com/appuser.php";
     String token;
     SwipeRefreshLayout refreshLayout;
 
@@ -93,7 +95,7 @@ public class Live_tips extends AppCompatActivity {
             free_matchesAdapter=new Free_MatchesAdapter(Live_tips.this,0,arrayoflivematches);
 
             AsyncHttpClient asyncHttpClient=new AsyncHttpClient();
-            asyncHttpClient.post("http://www.livebettinggoal.com/livebet.php", new TextHttpResponseHandler() {
+            asyncHttpClient.post("https://www.livebettinggoal.com/livebet.php", new TextHttpResponseHandler() {
                 @Override
                 public void onFailure(int i, Header[] headers, String s, Throwable throwable) {
                     mprogress.dismiss();
@@ -174,8 +176,8 @@ public class Live_tips extends AppCompatActivity {
         })
         {
             @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String,String> params=new HashMap<String,String>();
+            protected Map<String, String> getParams() {
+                Map<String,String> params= new HashMap<>();
                 params.put("fcm_token",token);
                 return params;
             }
