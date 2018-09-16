@@ -41,10 +41,10 @@ public class Contact_admin extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        setContentView(R.layout.activity_public_channel);
-//       mAdView = findViewById(R.id.adView);
-//       AdRequest adRequest = new AdRequest.Builder().build();
-//        mAdView.loadAd(adRequest);
+        setContentView(R.layout.activity_contact_admin);
+       mAdView = findViewById(R.id.adView);
+       AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
         WebView webview= findViewById(R.id.webview);
 
         ConnectivityManager connectivityManager = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -59,7 +59,7 @@ public class Contact_admin extends AppCompatActivity {
         else {
             connected = false;
 
-            Snackbar snackbar = Snackbar.make(findViewById(R.id.public_channel), "No internet connection!", Snackbar.LENGTH_INDEFINITE);
+            Snackbar snackbar = Snackbar.make(findViewById(R.id.contact_admin), "No internet connection!", Snackbar.LENGTH_INDEFINITE);
             snackbar.setAction("Reconnect", new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

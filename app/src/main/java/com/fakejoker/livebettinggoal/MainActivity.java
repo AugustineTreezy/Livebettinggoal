@@ -34,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
             "Guidelines",
             "Free Live tips",
             "Results",
-            "Public channel",
             "VIP subscription",
             "Contact admin",
             "Share app",
@@ -44,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
             R.drawable.guideline,
             R.drawable.livetips,
             R.drawable.results,
-            R.drawable.pubchannel,
             R.drawable.vip,
             R.drawable.holaadmin,
             R.drawable.share,
@@ -146,24 +144,20 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(results);
                         break;
                     case 3:
-                        Intent pubchannel=new Intent(MainActivity.this,Public_channel.class);
-                        startActivity(pubchannel);
-                        break;
-                    case 4:
                         Intent vip=new Intent(MainActivity.this,Vip_subscription.class);
                         startActivity(vip);
                         break;
-                    case 5:
+                    case 4:
                         Intent admin=new Intent(MainActivity.this,Contact_admin.class);
                         startActivity(admin);
                         break;
-                    case 6:
+                    case 5:
                         Intent share=new Intent(Intent.ACTION_SEND);
                         share.setType("text/plain");
                         share.putExtra(Intent.EXTRA_TEXT,"https://play.google.com/store/apps/details?id=com.codegreed_devs.livebettinggoal");
                         startActivity(Intent.createChooser(share,"Share Via"));
                         break;
-                    case 8:
+                    case 7:
                         Intent about=new Intent(MainActivity.this,About.class);
                         startActivity(about);
                         break;

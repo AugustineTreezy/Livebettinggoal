@@ -10,7 +10,12 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import com.google.android.gms.ads.AdRequest;
@@ -32,15 +37,16 @@ public class Results extends AppCompatActivity {
     View view;
     boolean connected = false;
     SwipeRefreshLayout refreshLayout;
+    LinearLayout footer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_live_tips);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-//        mAdView = findViewById(R.id.adView);
-//        AdRequest adRequest = new AdRequest.Builder().build();
-//        mAdView.loadAd(adRequest);
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         //start of swipe refreshing
         refreshLayout= findViewById(R.id.live_tips);
@@ -73,12 +79,11 @@ public class Results extends AppCompatActivity {
             //getting the list view from the xml file
             res_matches= findViewById(R.id.matches);
 
-
             //initializing the arrayadapter
             ArrayList<Results_Matches> arrayoflivematches=new ArrayList<>();
             result_matchesAdapter=new Result_MatchesAdapter(this,0,arrayoflivematches);
 
-            AsyncHttpClient asyncHttpClient=new AsyncHttpClient();
+            AsyncHttpClient asyncHttpClient=new AsyncHttpClient(true,80,443);
             asyncHttpClient.post("https://www.livebettinggoal.com/results.php", new TextHttpResponseHandler() {
                 @Override
                 public void onFailure(int i, Header[] headers, String s, Throwable throwable) {
@@ -138,5 +143,28 @@ public class Results extends AppCompatActivity {
         }
 
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_items, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.vip_results) {
+            Intent intent = new Intent(Results.this,VipResults.class);
+            startActivity(intent);
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

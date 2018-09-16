@@ -54,9 +54,9 @@ public class Live_tips extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setContentView(R.layout.activity_live_tips);
 
-//        mAdView = findViewById(R.id.adView);
-//        AdRequest adRequest = new AdRequest.Builder().build();
-//        mAdView.loadAd(adRequest);
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
 
         refreshLayout= findViewById(R.id.live_tips);
@@ -94,10 +94,11 @@ public class Live_tips extends AppCompatActivity {
             ArrayList<Free_Matches> arrayoflivematches=new ArrayList<>();
             free_matchesAdapter=new Free_MatchesAdapter(Live_tips.this,0,arrayoflivematches);
 
-            AsyncHttpClient asyncHttpClient=new AsyncHttpClient();
+            AsyncHttpClient asyncHttpClient=new AsyncHttpClient(true,80,443);
             asyncHttpClient.post("https://www.livebettinggoal.com/livebet.php", new TextHttpResponseHandler() {
                 @Override
                 public void onFailure(int i, Header[] headers, String s, Throwable throwable) {
+                    System.out.print("Error: "+throwable);
                     mprogress.dismiss();
                     Snackbar snackbar=Snackbar.make(findViewById(R.id.live_tips),"Server Unreachable",Snackbar.LENGTH_INDEFINITE);
                     snackbar.setAction("Reconnect", new View.OnClickListener() {

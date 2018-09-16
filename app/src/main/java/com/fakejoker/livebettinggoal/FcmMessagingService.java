@@ -5,7 +5,8 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-import android.support.v7.app.NotificationCompat;
+import android.support.v4.app.NotificationCompat;
+import android.widget.Toast;
 
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
@@ -23,15 +24,12 @@ public class FcmMessagingService extends FirebaseMessagingService {
         String message=remoteMessage.getNotification().getBody();
         String sound=remoteMessage.getNotification().getSound();
 
-
             intent=new Intent(FcmMessagingService.this,MainActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             pendingIntent=PendingIntent.getActivity(this,1,intent,PendingIntent.FLAG_ONE_SHOT);
 
 
         long[] vibrate = new long[] { 100, 100, (long) 10000 };
-
-
 
         NotificationCompat.Builder builder=new NotificationCompat.Builder(this);
         builder.setContentTitle(title)

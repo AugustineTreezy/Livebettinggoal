@@ -16,6 +16,7 @@
     <string name="rate">Rate us</string>
     <string name="pubchannel">Public Channel</string>
     <string name="vip">VIP subscription</string>
+    <string name="vip_results">VIP Results</string>
     <string name="hola_admin">Contact admin</string>
     <string name="about">About</string>
     <string name="rules1">The general principle behind ‘live betting goal’ is that you can place your bets on any soccer event once the game has started; we deal with over goal bets.\nThe live bet tips/in-play are selected from live statistics from matches which are playing live by use of an automated betting program (We always recommend bet365 for your in play bets as they have the most games)\nThe program does a pre-match research of how the teams generally perform and uses the information to be ready to pull the trigger when live stats of the game comes up. (We know they are not always accurate all the time but they do give a good idea to how the game is currently panning out)\nThe program then sends notification in real time when it detects strong matches for live bet/in-play (E.g. for over 0.5 goals in first half), so it tries to predict them during the game obviously before the event (of a goal) takes place.
@@ -27,11 +28,12 @@
 	3. And last, with live bet you can win very quick most of the time within few minutes. Our only drawback is that you have to be fast.
 </string>
     <string name="rules_followed">Rules to be followed when betting live</string>
-    <string name="rules3">1. We recommend flat staking on each tip e.g. $10 on each bet and divide it into two individual bets, that is, $5 bet at odd 1.80 and sometime after if still available $5 repeat the bet at odd 2 and above. As simple as that.\nIf you can not afford to do $10 on each bet, then tailor it to what you can afford. Just make sure that the stake you use is the same for every bet!
-\n2. Follow 1 type of tips if you are new. If you mix you are going to get the non-meets from more than 1 type\n3. Place small stakes if you are new to live betting
+    <string name="rules3">We recommend flat staking on each tip e.g. $10 on each bet and divide it into two individual bets, that is, $5 bet at odd 1.80 and sometime after if still available $5 repeat the bet at odd 2 and above. As simple as that.\nIf you can not afford to do $10 on each bet, then tailor it to what you can afford. Just make sure that the stake you use is the same for every bet!
+\n2. Follow 1 type of tips if you are new. If you mix our tips with yours or other tipsters you might get the non-meets\n3. Place small stakes if you are new to live betting
+
 </string>
     <string name="summary">Summary:</string>
-    <string name="plans">Staking plan, bankroll management, common sense and discipline, this is the kind of work you need to put in to stay profitable and have an edge over the bookie in the long term.\nFew free matches are posted on this app.</string>
+    <string name="plans">Staking plan, bankroll management, common sense &amp; discipline, this is the kind of work you need to put in to stay profitable and have an edge over the bookie in the long term.\nFew free matches are posted on this app.</string>
     <string name="rules4">
 Join VIP telegram channel to get all in-play/live bet matches with well researched solid stats and research.
 
